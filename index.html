@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="hearts"></div>
+
+    <div class="main-card">
+      <div class="title-container">
+        <h1>Kathlyn, will you be my valentine? 💖</h1>
+      </div>
+
+      <div class="button-container">
+        <button id="yesBtn">YES💘</button>
+        <button id="noBtn">NO</button>
+      </div>
+
+      <p id="message"></p>
+    </div>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- YES POPUP CARD -->
+    <div id="yesPopup" class="popup-overlay hidden">
+      <div class="popup-card">
+        <h2>ofc you said yes ❤️</h2>
+
+        <img src="funny.jpg" alt="Funny Picture of Me" class="popup-image" />
+
+        <p>
+          You can call this guy yours now😛
+        </p>
+
+        <button id="closePopup">Okay</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
