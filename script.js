@@ -111,3 +111,33 @@ function updateConfetti() {
 }
 
 updateConfetti();
+
+const music = document.getElementById("bgMusic");
+
+// Function to start music
+const startMusic = () => {
+  music.play().catch(error => {
+    // Browsers sometimes still block it until a click
+    console.log("Autoplay prevented, waiting for a click.");
+  });
+  
+  // Remove listeners so we don't try to play it every time she moves
+  document.removeEventListener("mousemove", startMusic);
+  document.removeEventListener("touchstart", startMusic);
+  document.removeEventListener("click", startMusic);
+};
+
+// Listen for any interaction to trigger the audio
+document.addEventListener("mousemove", startMusic);
+document.addEventListener("touchstart", startMusic);
+document.addEventListener("click", startMusic);
+
+yesBtn.addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+    music.play(); // Kicks off the song if it's not already playing
+    
+    message.textContent = "She said YES!! 💕";
+    launchConfetti();
+    popup.classList.remove("hidden");
+    burstHearts(yesBtn);
+  });
